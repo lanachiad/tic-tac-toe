@@ -4,21 +4,29 @@ import { Alert, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
 export default class Box extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      symbol: ' '
+    };
   }
 
-  _onPressButton() {
-    Alert.alert('You tapped the button!');
-  }
+  _onPressButton = () => {
+    this.addSymbol();
+  };
 
-  addSymbol = () => {};
+  addSymbol = () => {
+    if (this.state.symbol == ' ') {
+      this.setState({ symbol: 'X' });
+    }
+  };
 
   render() {
     return (
       <View>
         <TouchableHighlight onPress={this._onPressButton} style={btnstyles.button} underlayColor="white">
           <View style={btnstyles.button}>
-            <Text style={btnstyles.buttonText}>X</Text>
+            <Text style={btnstyles.buttonText}>
+              {this.state.symbol}
+            </Text>
           </View>
         </TouchableHighlight>
       </View>

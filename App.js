@@ -22,38 +22,14 @@ export default class App extends React.Component {
             <Box />
           </View>
           <View style={styles.row}>
-            <TouchableHighlight onPress={this._onPressButton} style={styles.button} underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>X</Text>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={this._onPressButton} style={styles.button} underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>X</Text>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={this._onPressButton} style={styles.button} underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>X</Text>
-              </View>
-            </TouchableHighlight>
+            <Box />
+            <Box />
+            <Box />
           </View>
           <View style={styles.row}>
-            <TouchableHighlight onPress={this._onPressButton} style={styles.button} underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>X</Text>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={this._onPressButton} style={styles.button} underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>X</Text>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={this._onPressButton} style={styles.button} underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>X</Text>
-              </View>
-            </TouchableHighlight>
+            <Box />
+            <Box />
+            <Box />
           </View>
         </View>
       </View>
@@ -76,6 +52,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between'
-  }
   }
 });

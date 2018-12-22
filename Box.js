@@ -1,7 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
 export default class Box extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  _onPressButton() {
+    Alert.alert('You tapped the button!');
+  }
+
+  addSymbol = () => {};
+
   render() {
     return (
       <View>

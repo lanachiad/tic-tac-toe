@@ -5,21 +5,29 @@ import Box from './Box';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      player: 0
+    };
   }
 
-  _onPressButton() {
-    Alert.alert('You tapped the button!');
-  }
+  playersTurn = () => {
+    let currentPlayer = this.state.player;
+
+    if ((currentPlayer = 0)) {
+      this.setState({ player: 1 });
+    } else {
+      this.setState({ player: 0 });
+    }
+  };
 
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.wrapper}>
           <View style={styles.row}>
-            <Box />
-            <Box />
-            <Box />
+            <Box onPress={this.playersTurn} currentPlayer={this.state.player} />
+            <Box onPress={this.playersTurn} currentPlayer={this.state.player} />
+            <Box onPress={this.playersTurn} currentPlayer={this.state.player} />
           </View>
           <View style={styles.row}>
             <Box />

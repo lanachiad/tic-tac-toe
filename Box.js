@@ -15,7 +15,7 @@ export default class Box extends React.Component {
 
   addSymbol = () => {
     if (this.state.symbol == ' ') {
-      this.setState({ symbol: 'X' });
+      this.setState({ symbol: this.props.currentPlayer });
     }
   };
 
